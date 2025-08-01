@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fafafa;
+    }
+
+    .recipe-app form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #e7ad95;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e7ad95;
+    }
+
+    .recipe-card {
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .recipe-card h3 {
+      margin-top: 0;
+    }
+
+    .recipe-card button {
+      margin-right: 10px;
+      margin-top: 5px;
+      background-color: #eee;
+      color: #333;
+    }
+
+    .recipe-card button:hover {
+      background-color: #ddd;
+    }
+
+    .details {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="recipe-app">
+    <form id="recipeEntryForm">
+      <input type="text" id="recipeTitle" placeholder="Recipe Title" required />
+      <textarea id="ingredients" placeholder="Enter ingredients (one per line)" required></textarea>
+      <textarea id="instructions" placeholder="Enter cooking instructions" required></textarea>
+      <button type="submit">Add Recipe</button>
+    </form>
+
+    <div id="recipeContainer"></div>
+
+    <button id="clearRecipesButton">Clear All Recipes</button>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
